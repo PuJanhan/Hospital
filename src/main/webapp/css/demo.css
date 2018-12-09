@@ -1,0 +1,262 @@
+<style>
+body{
+    font-size: 12px;
+    font-family: Arial;
+}
+/*超链接颜色*/
+a{
+    color:gray;
+}
+/*设一个医院的主色调*/
+.hospitalColor{
+    color: #9E3110 !important;
+}
+nav.top{
+    font-size: 14px;
+    background-color: #f2f2f2;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom:1px solid  #e7e7e7;
+}
+nav.top span{
+
+    color:black;
+    margin: 0px 10px 0px 10px;
+}
+nav.top a{
+    color: #999;
+    margin: 0px 10px 0px 10px;
+}
+/*鼠标放上去超链接样式*/
+nav.top a:hover{
+    color: #9E3110;
+    text-decoration: none;
+}
+
+
+div.footer{
+    margin: 0px 0px;
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-top-color: #e7e7e7;
+    background-color:white;
+}
+div.footerpart1{
+    background-color:white;
+    text-align: center;
+}
+
+
+
+div.footerpart2{
+    text-align: center;
+}
+div.footerpart3{
+    text-align: center;
+}
+
+
+
+/*以下是首页样式*/
+
+
+
+div.headmenu{
+    background-color: #9E310F;
+    height:50px;
+    line-height:50px;
+
+}
+
+
+div.headmenu a{
+    font-size: 20px;
+    color: white;
+    text-decoration:none;
+}
+
+div.headmenu a:hover{
+    color: white;
+
+}
+
+div.headmenu span{
+    margin: 0px 20px 0px 20px;
+}
+
+
+
+/*科室列表样式*/
+
+
+div.ks{
+    background-color: #FFFBF8;
+}
+
+
+div.ksname{
+    padding-bottom:15px;
+    padding-top: 15px;
+    font-size: 18px;
+    text-align: center;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #FFF5EE;
+
+}
+
+div.ksname>a{
+    color: #EF8040;
+}
+
+div.ksname a:hover{
+    color: #9E3110;
+    text-decoration:none;
+}
+
+/*专家列表样式*/
+
+div.row{
+    background-color: #FFFBF8;
+    height: 50;
+    margin: 10px 0px 10px 0px;
+}
+
+div.expertphoto{
+    margin: 10px 10px 10px 10px;
+    float:left;
+}
+
+
+
+div.expertname{
+    color: #A4381E;
+    font-size: 18px;
+    margin: 10px 0px 10px 0px;
+}
+
+div.expertword a{
+    line-height:100px;
+    color: #9E3110;
+    font-size: 20px;
+}
+
+div.expertword{
+    float:left;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+div.brief{
+
+
+    color: gray;
+    margin-left: 300px;
+    margin-top: 10px;
+
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    border-style: solid;
+    border-width: 3px;
+    border-color: #FFF5EE;
+}
+
+
+/*登陆页面样式*/
+div#loginDiv{
+    background-color: white;
+}
+
+div.simpleLogo{
+    padding: 32px 0px;
+    /*上下内边距*/
+}
+
+img.loginBackgroundImg{
+    display: block;
+    /*以块状显示，自动换行, 并且可以修改宽度*/
+    width: 1500px;
+    margin: 0px auto;
+    /*本元素居中显示*/
+}
+
+div.loginSmallDiv{
+    background-color:#FDF4EC;
+    position: absolute;
+    /*绝对定位*/
+    right: 180px;
+    /*距离右边px*/
+    top: 550px;
+    /*向下移动180px*/
+    width: 350px;
+    height: 400px;
+    padding: 60px 25px 80px 25px;
+}
+
+div.loginheadtext{
+    color: #3C3C3C;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+div.loginInput{
+    margin: 20px 0px;
+}
+
+div.loginInput span.loginInputlabel{
+    margin: 0px;
+    width: 60px;
+    height: 30px;
+    display:inline-block;
+/*    显示为内联，既可以设置大小，又能够不换行*/
+}
+
+
+span.loginInputlabel{
+    font-size: 14px;
+    font-weight: bold;
+/*    position: relative;
+    !*相对定位*!
+    left: 0px;
+    top: 0px;*/
+}
+
+
+div.loginInput>input{
+    display: inline-block;
+    /*显示为内联，既可以设置大小，又能够不换行*/
+    border: 0px solid transparent;
+    /*无边框*/
+    width: 230px;
+    height: 30px;
+}
+
+
+input.loginButton{
+
+    color: #FFCC99;
+    background-color:#AC4B1C;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+
+/*注册页面样式*/
+
+div.registerSmallDiv{
+    background-color:#FDF4EC;
+    position: absolute;
+    /*绝对定位*/
+    right: 180px;
+    /*距离右边80px*/
+    top: 550px;
+    /*向下移动180px*/
+    width: 350px;
+    height: 600px;
+    padding: 60px 25px 80px 25px;
+}
+</style>

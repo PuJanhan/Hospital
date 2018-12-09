@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace：命名空间，用于隔离sql，还有一个很重要的作用，后面会讲 ,按住ctrl可以点进去-->
+<mapper namespace="cn.njupt.hospital.user.mapper.UserMapper">
+
+	<!-- id:statement的id 或者叫做sql的id-->
+	<!-- parameterType:声明输入参数的类型 -->
+	<!-- resultType:声明输出结果的类型，应该填写pojo的全路径 -->
+	<!-- #{}：输入参数的占位符，相当于jdbc的？ -->
+	
+	
+	<select id="findUserByage" parameterType="Integer"
+		resultType="cn.njupt.hospital.user.entity.Users">
+		SELECT * FROM users WHERE age  = #{age}
+	</select>
+	
+	<!-- 根据用户名查找用户 -->
+	<select id="findUserBysname" parameterType="String"
+	  resultType="cn.njupt.hospital.user.entity.Users">
+	  SELECT * FROM users WHERE sname = #{sname}
+	</select>
+	
+	<!-- 根据身份证号查找 -->
+	<select id="findUserByidnumber" parameterType="String"
+	resultType="cn.njupt.hospital.user.entity.Users">
+	SELECT * FROM users WHERE idnumber  = #{idnumber}
+	</select>
+   
+   <!-- 根据手机号查找 -->
+	<select id="findUserBytelnumber" parameterType="String"
+	resultType="cn.njupt.hospital.user.entity.Users">
+	SELECT * FROM users WHERE telnumber  = #{telnumber}
+	</select>
+	
+	
+	<!-- 添加用户 -->
+	
+	<insert id="adduser" parameterType="cn.njupt.hospital.user.entity.Users">
+		insert into users(sname,age,gender,idnumber,telnumber,spassword,imagePath)values(#{sname},#{age},#{gender},#{idnumber},#{telnumber},#{spassword},#{imagePath})
+	</insert>
+	
+	<!-- 查找所有部门 -->
+	<select id="findAll_Department" 
+	resultType="cn.njupt.hospital.user.entity.Department">
+	   SELECT * FROM department 
+	</select>
+	
+	<!-- 查找所有医生 -->
+	<select id="findAll_doctor" 
+	resultType="cn.njupt.hospital.user.entity.Doctor">
+	   SELECT * FROM doctor
+	</select>
+	
+	<!-- 按cid查找所有医生 -->
+	<select id="finddoctorbycid" parameterType="String"
+	resultType="cn.njupt.hospital.user.entity.Doctor">
+	   SELECT * FROM doctor where cid = #{cid}
+	</select>
+	<!-- 按bid查找医生信息 -->
+	<select id="docInfor" parameterType="String"
+	resultType="cn.njupt.hospital.user.entity.Doctor">
+	   SELECT * FROM doctor where bid = #{bid}
+	</select>
+	<!-- 按姓名查找医生排班信息 -->
+	<select id="findTime" parameterType="String"
+	resultType="cn.njupt.hospital.user.entity.TimeList">
+	   SELECT * FROM duty_roster where dname = #{dname}
+	</select>
+	
+	<insert id="insertappoint" parameterType="cn.njupt.hospital.user.entity.Appointment">
+	   insert into appointment(atime,usersname,docname,state)values(#{atime},#{usersname},#{docname},#{state})
+	</insert>
+	
+     <!-- 按患者姓名查找其预约 -->
+     <select id="findappoint" parameterType="String"
+	resultType="cn.njupt.hospital.user.entity.Appointment">
+	   SELECT * FROM appointment where usersname = #{usersname}
+	</select>	
+</mapper>

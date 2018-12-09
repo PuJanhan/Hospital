@@ -1,0 +1,72 @@
+package cn.njupt.hospital.user.entity;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+
+
+/**
+ * 存放聊天的消息
+ * @author Administrator
+ *
+ */
+public class Message {
+   public String from;
+   public String fromName;
+   public String to;
+   public String text;
+   public Date date;
+   
+   List<Users> userList = new ArrayList<>();
+
+public String getFrom() {
+	return from;
+}
+
+public void setFrom(String from) {
+	this.from = from;
+}
+
+public String getFromName() {
+	return fromName;
+}
+
+public void setFromName(String fromName) {
+	this.fromName = fromName;
+}
+
+public String getTo() {
+	return to;
+}
+
+public void setTo(String to) {
+	this.to = to;
+}
+
+public String getText() {
+	return text;
+}
+
+public void setText(String text) {
+	this.text = text;
+}
+
+public Date getDate() {
+	return date;
+}
+
+public void setDate(Date date) {
+	this.date = date;
+}
+
+public List<Users> getUserList() {
+	return userList;
+}
+
+public void setUserList(List<Users> userList) {
+	this.userList = userList;
+}
+   
+   
+}
